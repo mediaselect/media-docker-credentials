@@ -1,6 +1,0 @@
-SHELL=/bin/bash
-RANDOM_DELAY=3
-ANACRON_PATH=$HOME/.local/share/media-docker-credentials
-
-1 5 start_early DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus DOCKER_HOST=unix:///var/run/docker.sock $HOME/.local/share/media-docker-credentials/.venv/bin/python3 $HOME/media-docker-credentials/start_cron_docker.py >> $HOME/.local/share/media-docker-credentials/logs/start_cron_docker.log 2>&1
-1 40 start_late DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$(id -u)/bus DOCKER_HOST=unix:///var/run/docker.sock $HOME/.local/share/media-docker-credentials/.venv/bin/python3 $HOME/media-docker-credentials/start_cron_docker.py >> $HOME/.local/share/media-docker-credentials/logs/start_cron_docker.log 2>&1
